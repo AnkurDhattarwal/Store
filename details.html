@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Details</title>
+    <style>
+        /*navigation bar*/
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+        }
+
+        #navigation {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0px;
+            background-color: black;
+            z-index: 5;
+        }
+
+        #logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #five {
+            font-size: xx-large;
+            color: red;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            font-weight: bold;
+            align-items: center;
+            font-size: 20px;
+
+        }
+
+        #search {
+            font-weight: bold;
+            border-radius: 20px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            height: 30px;
+            width: 300px;
+            padding-left: 20px;
+        }
+
+        #logoimg {
+            width: 100px;
+            border-radius: 50%;
+            margin: 10px;
+            filter: invert(1);
+        }
+
+        #div {
+            display: flex;
+            align-items: center;
+            width: 160px;
+            height: 130px;
+        }
+
+        #login {
+            height: 100px;
+            border-radius: 50%;
+            filter: invert(1);
+        }
+
+        #cart {
+            height: 50px;
+            filter: invert(1);
+        }
+
+        .items :hover,
+        .items :active {
+            color: grey;
+        }
+
+        .items a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #lens {
+            width: 22px;
+            height: 22px;
+        }
+
+        #lensbut {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        #twobox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 160px;
+        }
+
+        /*footer*/
+        #foot {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+        }
+
+        .foot {
+            height: 100px;
+            filter: invert(1);
+
+        }
+
+        #a {
+            border-right: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding-right: 30px;
+            padding-left: 0px;
+        }
+
+        #b {
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding: 0px 30px;
+
+        }
+
+        #c {
+            border-left: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 0px;
+
+        }
+
+        #footer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+
+        }
+
+        #footer1 {
+            padding-right: 80px;
+            text-align: center;
+        }
+
+        #footer2 {
+            padding: 0px 80px;
+            text-align: center;
+        }
+
+        #footer3 {
+            padding-left: 80px;
+            color: aqua;
+        }
+
+        #footer h3 {
+            color: red;
+        }
+
+        /*self*/
+        form {
+            text-align: center;
+            font-weight: bold;
+            color:black;
+            font-weight:bold;
+        }
+
+        #form {
+            margin: 250px auto;
+            margin-bottom: 150px;
+            width: 50%;
+            border-radius: 20px;
+            background-color: rgb(209, 199, 199);
+            padding: 20px;
+        }
+        #file{
+            font-weight: bold;
+        }
+        #sub{
+            width: 30%;
+            font-weight: bolder;
+            color: white;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation">
+        <div class="nav" id="div">
+            <img id="logoimg"
+                src="https://w7.pngwing.com/pngs/459/277/png-transparent-high-five-bicycle-shop-hi-5-bikes-thumb-bicycle.png"
+                alt="">
+            <p id="logo"> HIGH <span id="five">5</span> STORE </p>
+        </div>
+        <div class="nav" id="buttons">
+            <div class="items"><a href="home.html">Home</a></div>
+            <div class="items"><a href="shop.html">Shop</a></div>
+            <div class="items"><a href="about.html">About</a></div>
+            <div class="items"><a href="contact.html">Contact</a></div>
+        </div>
+        <!-- <div class="nav">
+            <input type="search" id="search" placeholder="search items">
+            <button id="lensbut"><img id="lens"
+                    src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-5.png" alt=""></button>
+        </div> -->
+
+        <div class="nav" id="twobox">
+            <div><a href="cart.html"><img id="cart"
+                        src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" alt=""></a></div>
+            <div><a href="login.html"><img id="login"
+                        src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+                        alt=""></a></div>
+        </div>
+    </div>
+
+
+    <div id="form">
+        <form action="#">
+            <h3 id="payment" style="color:red"></h3><br>
+            <h3 style="font-weight:bold;">Pay Using Phone Number</h3>
+            <h1 style="font-weight:bold;">7742216506</h1><br>
+            -------------------------OR------------------------- <br><br>
+            <h3 style="font-weight:bold;">Pay Using QR Code</h3>
+            <div><img src="qr_code.jpg" height="200px" alt=""></div><br>
+            <h4 style="font-weight:bold;">Upload Screenshot Of Payment</h2>
+            <input type="file" id="file" required><br><br>
+            <h5 style="color:red">OTP will be sent on registered mobile number</h5>
+            OTP : 
+            <input type="tel" required><br><br>
+            <a href="greet.html" target="_blank"><button id="sub" class="btn bg-primary">Submit</button></a>
+
+        </form>
+    </div>
+
+
+    <div id="foot">
+        <div id="a"> <img class="foot"
+                src="https://static.vecteezy.com/system/resources/thumbnails/010/926/876/small/shopping-bag-line-style-icon-diwali-vector.jpg"
+                alt=""><br><br> Can Collect The Ordered Item <br> From Room No. 319. <br> The Store Will Be Open From 9
+            P.M. to 3 A.M.</div>
+        <div id="b"><img class="foot" src="https://cdn-icons-png.flaticon.com/512/66/66841.png" alt=""><br><br> Extra
+            Charges Will Be Applied <br> If You Want Home Delivery. <br> &#x20B9 5 Will Be Charged Extra Per &#x20B9
+            100.</div>
+        <div id="c"><br> <img class="foot"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWoAAACLCAMAAAB/aSNCAAAAgVBMVEX///8AAAACAgK8vLxeXl5YWFiHh4eWlpby8vLLy8u1tbWBgYGjo6P19fXAwMCmpqZERESOjo4eHh7a2trT09Ps7Ozk5ORHR0cmJiadnZ1RUVHGxsZzc3NqamrY2Nh6eno2NjYQEBAvLy89PT1jY2MiIiIXFxevr6+Tk5MNDQ11dXWEEznCAAAMHklEQVR4nO2daWOiMBCGxQvP2qpgxfuotP7/H7iQQI7JQcDQ6ob3y64iOZ4mk0kyhFbrlRQMR/74Gp1vbc/zfubHaDdej5aDvy7Wf6YwPlw8lVb9TvDXBfw/FMRXJWWin3tn+tcFfXGF/rmYc966Z40xqarp7GjMGSvq/HWZX1KLbUnOWP3GbpfURj0MFum6+OvCv5I25hZapqiBbahlWRMtqtuYEQMF3YdBpxr/dT2eX74V0Kkab0SrxZc10onJbvzssXLU+rAIOtXoN6v1jOp7ofT74PHhEOr6y1V7NvU9T9auN9ZBJzrJ/6quKEEtYW3beORyenRMUQusi1y81f171tksEw07sX+IzFl//Ekln0MINc96qpse9vyhxJeYLieGHrjDBhujZlkPflSYbv2lLqm90SLrqu4aPa0y1JR1oGLUN1jMCL/bhayP9VXmuZWjzlkrSB+NB7RNoeU+11WXJxdBjVnLSUdawwEV7hrWMlHUKeupjMylFOhUYcEYeamjJk8vBnXCWrbq8VYl2eWnlnXXdjVeQSxqbyVC6VdNeKJl7eKyal9LZP7AFkqg3SaL7VXhVaRFvX0sbe1y995O+V9IOtQPL3sudaydC8vRoLawDjfQzB+dmzYqUZ/ttDrNhGZtJYPXkQr1u60MNPMZx5avFagt9m51YJRjs0Y56shmFmrWbpkQOeqh1TzUgcJOBeMoDEjpZQ+t3lWonZqgq4ZFu+36pGJtN5vnltLZswohVOXi0sionsJYZd1R5eLQHrpmtmiVtcoNudnM5LmlWwOxylq1OexOs9au7NlkrVp6+rSYx3NLv15tk/X9N/rOM0uP2ioHRRY9i1k8tQpQext7Wc0UWbgyZSxCbZP1SZ7Dt70cnlqFqC2yHilysJbBc6sYdbXoBKkUDp8jA+OhW6iVtSX8Tk+Wfm9iK/1GjRo1atSoUaPn1qiTa7MQQ17oVazM4e1ItWRuGonpMBOTkKY7FP26EF0AEXbpHcrIyQUtxFA16Q7iLYqevGxj8SmmYCTmiLVMKyNJczG7R6vVavf9lqe2EUuNakJQcJ795wef6AC6/l+Sm4gObJJcOihe/Ug/x9x9EYgRnchmdOk3ysgC/qHHnWS2ueRinnrwj4a2bKTRxof0ipDghJ0avWOYI7HU6Pli8jQf5MWFIQuoj/j7mxT1mE2SyxKhZqKXhPkyV5dskWjHJZF+o5x4wADUI2yGwo4MiLZ+45iwGqdXwORSeHB4hr5GYNfC77gqcGLjuQTU2R6ofLr7AOqssFj5ehwXrlAKNYwYk4RM8sFUpVB/C4nh75ew4ihb2mXTTz/dXm9FisP0I4T6llzNlbU08g17PVozSRqgPnZ70Tt5PoPp0jnqOZtEMepufzze9vjaY2XnBFzWm/1+OMlCRLhF6zKoc9K7SacTj7+YG5GRoquGyCoxWz7px8wCh5nJo6PGACASJLaPljHqDNwwgjUnq8w+SFSPOhuy9xgl05Hx+taNdJI9tn9saiVQZ9aDEA37BBgOiCDOxTz9xJhGrvns0W9pZ0aoNQ9HQYQ0SQPUBMaYLyFCjZ8hYkxuMWqyO4v+dnRfHAPgwj/OIMcyqDFpeSwWioHNrUIM4XCoccL0IYnfQY1voNVJUfevoMOUQB3wfXMLumpeLxatOeq1B9qqmO6AqRXr6vCoUe+I+FvrR40aA/XEU9RX/Dwj/bIEavyAHvFwPT4zegNTRnPU6Ma7qiDIVh1ILfijBHjUe74t/RJqVB06Us9QGdZ8MmVQ91g8b2Jx8gdTqRUwRj0UuwgndDng/8deA62aBmv+ZqumOy8p6sS0fnLtpwzqFcuxz1cpE7LndNg1Ro1S0+y4owayy//De+88apQSdVeKPBCbtpp6wjN8Px6j98xvTFFzDWolvdPnu7cxauTezGQ/BHVB/06FSwQ1NuvUlONWPR3kgpMwO6jRRPyLXs1Q4/Es90tLoOYnaeiDMIwBn9cYNffnlynGneiDb0zk3ryawzboHsJsEaRrBTUeophAuhw1N6CZo8YOSL4gIzoCSGBmZ4oa23jtAX7Imx7KaKVf3UZxPPEPcw+2+lpR7+I4Xn9kJx6wCx4ENZ6/ByRRkylMmE3mSAfkP+UKq6EOZBR40QUS+LwrhDlnS1UralYH9tcENbazEUlUj/rS672T1QXyU0U7rIga3CZV/qC7EDMP6sxnh1C3P4lqQj3nTSlFjRvRW56o+XITE76EPguL4otqqA1aNQmAFWJN+CKCItXqgRAdwf0Udba0kydqivomTKSFgQwYU4u2OnPrJc9hpt+e1r7vozTB04O1+tXdJNc1MhHAqDGo8cr4oVUC9enO9xGUghAuNeL/xuU8kIJzNEJ5R2I8kEisdf1TGDwa8P4ni3qY160Y9XqRSKwgamM+/BY5Y3QsNkb9JWkagr4EAEjpt9ivDsRa20IdgB7FOHtgLpGKRY1nkudyUxhO39LefOHTM0aNiqNcAslUiBr/pbkpbDXUaEbNuVdLkDLrV6MOLm54cVkkUD6ropauWgTAEBijjsV2JGpeiBrvY7FmrRrqK0wGLwgwNWFRi94+hzqv3KoqatzJwBYtAvhDPxujxgZPNzNvGaHewFpXQ40m2twAewItl5stXmGf5FHjvr67VkaN95Y4I44HLmbebL6IGsk6CZABajyEMLWuhhr3Tqbmffgn5FDjhsJsawDUmMupMursJD+GTjYzY35jjhp7zTftKTEmqGGtq/nV2dknBMyY/9iSLjed6FWAmsa+V0Od71USvyHz6lkTh1BLH9sQNrx2ILVWMIOLWSaocZlprVU75rkUqPMTIQ9xpzPLQjCO7A/AIioasak1hajJNKsianJkxWGWlOeQfeDWkhHqM1NREkwv7pjnQTD3JLXY37VF022EGqdDaq2KA8mlQJ0tNXPiehxAjTslsaYC6nwFpypq2UHkvMP2JlxXox6c4G+roSZTBpwqTPTI36xCnS0xUK142wZQE+cZS0Cdo6qMOts9YwRi18qgzmfelVCzX6Na5SZEFbOXC8biMWJDgM6QAnLgmBkctji5rZwIJc3KoY/Z087hggNTHq8PRzXxmIW8tUlj9obc+aKfMFIBMs00ovGluFYojjRkrkoiUbm7VY++Df3darWKDjNJrCmMK12yIZuhGMmKrusjUUdFjyol5YmS8mzXkhiOAFZ0lDssikjUwajfTWt3999Ex+9NrECjRo0aNWrUqJErujPPetd+bqbbz5hzM7e6T+92++SEwPPauep+mdmIZsXImfNAWhGDuuZm/SNH7copN603pv58XJNtTRSN2pWzm9LlGKbaNR6UPvXkqJ05kSwdGJl61/jKp62UdNuVQRGJbW31vRpnqWjU7pwe2Up3C1nLWdf7xtuKRu3OmagtYETtvTqD105B2qGTflOxzbom30vuUrvWqGGzrmOcCuWGuu3UqexIa65Z1+DoyicvSV52Xx/xCjpxrE/FN5TTu4q0U2/QwNpwLLyj3dS7KtIOTRSpeBp23xqnmLsk2bj1tqNMYNZs9x1eKtLOjYlYwBuz+WY6FWnX3kxHdAWsrb1vUUHaUfOBBFxfO28R/VSTdu4tolQLgbWNd+MqSbv3blxGMw/SePCNz9860u698ZmV4Ct4twffY64iXeNi7YtoJbCWn5dporUGdBueF+mgvkTW1d7qsPzUknZwQg4l2f/zvEvpNaGwpwNd25r4aymQMPK8qBTsMH2wSEfa0VkilIx1Avto7PhtIj3ohjSRlHVqs/sG3kj43dZztr9s+MoaKIKQPO/W1xqSvX8uaNBttyeJoqZn5fpyYrb9oWRPfTqc4EfsikCDEzAadZXMcOjo+/Z71tksE206sX/PjrMvwIzurjkA8wX1ofWKJSrGjG50bH/cSBtDemXknVxdoNZrcLQMuzHTammNSAXSzROxai2+rMFOPJe6YgH/E/mmA14R6GY8LFSgdvvKgG6WTE201C3wm5HuuhhYU0mbc3XY6fTygY0c97R5r2azk7uuDeiSWmyNp4QMZ++jMR1VNDuWoI0Wphqvo7JCtEhaTBtxnjV+9GMK4p12eQld+zl0XA6nsahwNL54VG1uqS/qdxr7bFfBcOSPr9Hx1vba3s/8Eu3G69HyRYzGP1xqntt70Gt2AAAAAElFTkSuQmCC"
+                alt=""><br><br> Can Be Returned Within Only A Day After Delivery. <br> Only 95% Money Will Be Returned
+            If Returned After A Day <br> And Can't Be Returned After Two Days</div>
+    </div>
+    <div id="footer">
+        <div id="footer1">
+            <h3>ADDRESS</h3>Room No. 319 <br>2 <sup>nd</sup> Floor <br>Hostel - 2 <br>IIIT LUCKNOW
+        </div>
+        <div id="footer2">
+            <h3>OPENING HOURS</h3>Monday to Saturday <br>[ 9 P.M. to 3 A.M. ] <br>Sunday : 24 Hours
+        </div>
+        <div id="footer3">
+            <h3>OWNERS</h3>@ankurdhattarwal <br> @anshaggarwal <br> @anshajkantsingh <br>@aunabbas <br>
+            @atharvamahendrashirshat <br> @rishirajmaheshwari
+        </div>
+        <script>
+            var amount = localStorage.getItem("amount_new");
+            document.getElementById("payment").innerHTML = "Total Amount : ₹ "+amount;
+        </script>
+
+</body>
+
+</html>

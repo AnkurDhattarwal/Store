@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Cart</title>
+    <style>
+        /*navigation bar*/
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+        }
+
+        #navigation {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0px;
+            background-color: black;
+            z-index: 5;
+        }
+
+        #logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #five {
+            font-size: xx-large;
+            color: red;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            font-weight: bold;
+            align-items: center;
+            font-size: 20px;
+
+        }
+
+        #search {
+            font-weight: bold;
+            border-radius: 20px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            height: 30px;
+            width: 300px;
+            padding-left: 20px;
+        }
+
+        #logoimg {
+            width: 100px;
+            border-radius: 50%;
+            margin: 10px;
+            filter: invert(1);
+        }
+
+        #div {
+            display: flex;
+            align-items: center;
+            width: 160px;
+            height: 130px;
+        }
+
+        #login {
+            height: 100px;
+            border-radius: 50%;
+            filter: invert(1);
+        }
+
+        #cart {
+            height: 50px;
+            filter: invert(1);
+        }
+
+        .items :hover,
+        .items :active {
+            color: grey;
+        }
+
+        .items a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #lens {
+            width: 22px;
+            height: 22px;
+        }
+
+        #lensbut {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        #twobox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 160px;
+        }
+
+        /*footer*/
+        #foot {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+        }
+
+        .foot {
+            height: 100px;
+            filter: invert(1);
+
+        }
+
+        #a {
+            border-right: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding-right: 30px;
+            padding-left: 0px;
+        }
+
+        #b {
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding: 0px 30px;
+
+        }
+
+        #c {
+            border-left: 2px solid white;
+            font-size: 15px;
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 0px;
+
+        }
+
+        #footer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+
+        }
+
+        #footer1 {
+            padding-right: 80px;
+            text-align: center;
+        }
+
+        #footer2 {
+            padding: 0px 80px;
+            text-align: center;
+        }
+
+        #footer3 {
+            padding-left: 80px;
+            color: aqua;
+        }
+
+        #footer h3 {
+            color: red;
+        }
+
+        /*self*/
+        #table {
+            margin: 250px auto;
+            margin-bottom: 50px;
+            background-color: rgb(49, 46, 46);
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+            box-shadow: 0px 0px 10px white;
+        }
+
+        thead {
+            font-size: larger;
+            color: khaki;
+        }
+
+        td {
+            padding: 10px 20px;
+        }
+
+        #tfoot {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation">
+        <div class="nav" id="div">
+            <img id="logoimg"
+                src="https://w7.pngwing.com/pngs/459/277/png-transparent-high-five-bicycle-shop-hi-5-bikes-thumb-bicycle.png"
+                alt="">
+            <p id="logo"> HIGH <span id="five">5</span> STORE </p>
+        </div>
+        <div class="nav" id="buttons">
+            <div class="items"><a href="home.html">Home</a></div>
+            <div class="items"><a href="shop.html">Shop</a></div>
+            <div class="items"><a href="about.html">About</a></div>
+            <div class="items"><a href="contact.html">Contact</a></div>
+        </div>
+        <!-- <div class="nav">
+            <input type="search" id="search" placeholder="search items">
+            <button id="lensbut"><img id="lens"
+                    src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-5.png" alt=""></button>
+        </div> -->
+
+        <div class="nav" id="twobox">
+            <div><a href="cart.html"><img id="cart" src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+                        alt=""></a></div>
+            <div><a href="login.html"><img id="login"
+                        src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+                        alt=""></a></div>
+        </div>
+    </div>
+
+    <h3 id="display" style="margin-top: 250px;margin-bottom:200px;text-align:center;color:red;font-weight:bold;">Oops ! Your Cart Is Empty. <br>Please Purchase Something To Show.
+    </h3>
+ 
+
+
+    <table id="table">
+        <thead id="thead" class="table-bordered">
+            <tr>
+                <td>Item Name</td>
+                <td>Count</td>
+                <td>Amount Per Item</td>
+                <td>Total Amount</td>
+                <td>Remove From Cart</td>
+            </tr>
+        </thead>
+        <tbody id="tbody" class="table-bordered">
+
+        </tbody>
+        <tfoot id="tfoot">
+            <tr>
+                <td colspan="3">Total Amount To Pay</td>
+                <td id="total_to_pay"></td>
+            </tr>
+            <tr>
+                <td colspan="5"><input type="button" class="btn bg-primary text-white" style="font-weight:bold; width:30%; margin:0px 5px" value="Print Bill" onclick="window.print()">
+                   <a href="pay.html" target="_blank"><button class="btn bg-success text-white" style="font-weight:bold; width:30%; margin:0px 5px" onclick="amount()">Buy Now</button></a></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <div id="foot">
+        <div id="a"> <img class="foot"
+                src="https://static.vecteezy.com/system/resources/thumbnails/010/926/876/small/shopping-bag-line-style-icon-diwali-vector.jpg"
+                alt=""><br><br> Can Collect The Ordered Item <br> From Room No. 319. <br> The Store Will Be Open From 9
+            P.M. to 3 A.M.</div>
+        <div id="b"><img class="foot" src="https://cdn-icons-png.flaticon.com/512/66/66841.png" alt=""><br><br> Extra
+            Charges Will Be Applied <br> If You Want Home Delivery. <br> &#x20B9 5 Will Be Charged Extra Per &#x20B9
+            100.</div>
+        <div id="c"><br> <img class="foot"
+                src="data:image/png;base64,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"
+                alt=""><br><br> Can Be Returned Within Only A Day After Delivery. <br> Only 95% Money Will Be Returned
+            If Returned After A Day <br> And Can't Be Returned After Two Days</div>
+    </div>
+    <div id="footer">
+        <div id="footer1">
+            <h3>ADDRESS</h3>Room No. 319 <br>2 <sup>nd</sup> Floor <br>Hostel - 2 <br>IIIT LUCKNOW
+        </div>
+        <div id="footer2">
+            <h3>OPENING HOURS</h3>Monday to Saturday <br>[ 9 P.M. to 3 A.M. ] <br>Sunday : 24 Hours
+        </div>
+        <div id="footer3">
+            <h3>OWNERS</h3>@ankurdhattarwal <br> @anshaggarwal <br> @anshajkantsingh <br>@aunabbas <br>
+            @atharvamahendrashirshat <br> @rishirajmaheshwari
+        </div>
+        <script>
+            
+            let amt = 0;
+            
+            var item1 = localStorage.getItem("name1");
+            if (item1 == " Ball Ink Pen [ Set Of Five ] ") {
+                //1
+                //console.log(item1)
+                function remove1() {
+                    amt = amt - count1 * only_num1;
+                    document.getElementById("total_to_pay").innerHTML = str1 + " " + amt;
+                    localStorage.removeItem("name1");
+                    ele1.remove();
+                }
+
+                var body1 = document.getElementById("tbody");
+                var ele1 = document.createElement("tr");
+                var sub11 = document.createElement("td");
+                ele1.appendChild(sub11);
+                body1.appendChild(ele1);
+                sub11.innerHTML = item1;
+
+
+                var count1 = localStorage.getItem("count1");
+                var sub12 = document.createElement("td");
+                ele1.appendChild(sub12);
+                //console.log(count1);
+                sub12.innerHTML = count1;
+
+
+                var price1 = localStorage.getItem("price1");
+                var removed1 = price1.toString();
+                //console.log(removed1)
+                var only_num1 = removed1.split(" ")[2];
+                console.log(only_num1);
+                var sub13 = document.createElement("td");
+                ele1.appendChild(sub13);
+                //console.log(count1);
+                sub13.innerHTML = price1;
+
+
+                var sub14 = document.createElement("td");
+                ele1.appendChild(sub14);
+
+                var sub15 = document.createElement("td");
+                ele1.appendChild(sub15);
+                var inpp1 = document.createElement("input");
+                inpp1.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp1.setAttribute("type", "button");
+                inpp1.setAttribute("style", "font-weight:bold;");
+                inpp1.setAttribute("value", "Remove");
+                inpp1.setAttribute("onclick", "remove1()");
+                sub15.appendChild(inpp1);
+
+
+                var str1 = removed1.split(" ")[1];
+                sub14.innerHTML = str1 + " " + count1 * only_num1;
+
+                amt = amt + count1 * only_num1;
+                document.getElementById("total_to_pay").innerHTML = str1 + " " + amt;
+            }
+            var item2 = localStorage.getItem("name2");
+            if (item2 == " Ball Ink Pen (PURE) [ Set Of 20 ] ") {
+                //2
+
+                //console.log(item2)
+                function remove2() {
+                    amt = amt - count2 * only_num2;
+                    document.getElementById("total_to_pay").innerHTML = str2 + " " + amt;
+                    localStorage.removeItem("name2");
+                    ele2.remove();
+                }
+                var body2 = document.getElementById("tbody");
+                var ele2 = document.createElement("tr");
+                var sub21 = document.createElement("td");
+                ele2.appendChild(sub21);
+                body2.appendChild(ele2);
+                sub21.innerHTML = item2;
+
+
+                var count2 = localStorage.getItem("count2");
+                var sub22 = document.createElement("td");
+                ele2.appendChild(sub22);
+                //console.log(count2);
+                sub22.innerHTML = count2;
+
+
+                var price2 = localStorage.getItem("price2");
+                var removed2 = price2.toString();
+                var only_num2 = removed2.split(" ")[2];
+                console.log(only_num2);
+                var sub23 = document.createElement("td");
+                ele2.appendChild(sub23);
+                //console.log(count2);
+                sub23.innerHTML = price2;
+
+
+                var sub24 = document.createElement("td");
+                ele2.appendChild(sub24);
+
+                var sub25 = document.createElement("td");
+                ele2.appendChild(sub25);
+                var inpp2 = document.createElement("input");
+                inpp2.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp2.setAttribute("type", "button");
+                inpp2.setAttribute("style", "font-weight:bold;");
+                inpp2.setAttribute("value", "Remove");
+                inpp2.setAttribute("onclick", "remove2()");
+                sub25.appendChild(inpp2);
+
+                var str2 = removed2.split(" ")[1];
+                sub24.innerHTML = str2 + " " + count2 * only_num2;
+
+                amt = amt + count2 * only_num2;
+                document.getElementById("total_to_pay").innerHTML = str2 + " " + amt;
+            }
+            var item3 = localStorage.getItem("name3");
+            if (item3 == " Spiral Notebooks [ Set Of Seven ] ") {
+                //3
+
+                //console.log(item3)
+                function remove3() {
+                    amt = amt - count3 * only_num3;
+                    document.getElementById("total_to_pay").innerHTML = str3 + " " + amt;
+                    localStorage.removeItem("name3");
+                    ele3.remove();
+                }
+                var body3 = document.getElementById("tbody");
+                var ele3 = document.createElement("tr");
+                var sub31 = document.createElement("td");
+                ele3.appendChild(sub31);
+                body3.appendChild(ele3);
+                sub31.innerHTML = item3;
+
+
+                var count3 = localStorage.getItem("count3");
+                var sub32 = document.createElement("td");
+                ele3.appendChild(sub32);
+                //console.log(count3);
+                sub32.innerHTML = count3;
+
+
+                var price3 = localStorage.getItem("price3");
+                var removed3 = price3.toString();
+                var only_num3 = removed3.split(" ")[2];
+                console.log(only_num3);
+                var sub33 = document.createElement("td");
+                ele3.appendChild(sub33);
+                //console.log(count3);
+                sub33.innerHTML = price3;
+
+
+                var sub34 = document.createElement("td");
+                ele3.appendChild(sub34);
+
+                var sub35 = document.createElement("td");
+                ele3.appendChild(sub35);
+                var inpp3 = document.createElement("input");
+                inpp3.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp3.setAttribute("type", "button");
+                inpp3.setAttribute("style", "font-weight:bold;");
+                inpp3.setAttribute("value", "Remove");
+                inpp3.setAttribute("onclick", "remove3()");
+                sub35.appendChild(inpp3);
+
+                var str3 = removed3.split(" ")[1];
+                sub34.innerHTML = str3 + " " + count3 * only_num3;
+
+                amt = amt + count3 * only_num3;
+                document.getElementById("total_to_pay").innerHTML = str3 + " " + amt;
+            }
+            var item4 = localStorage.getItem("name4");
+            if (item4 == " Metal Spiral Notebooks [ Set Of two ] ") {
+                //4
+
+                //console.log(item4)
+                function remove4() {
+                    amt = amt - count4 * only_num4;
+                    document.getElementById("total_to_pay").innerHTML = str4 + " " + amt;
+                    localStorage.removeItem("name4");
+                    ele4.remove();
+                }
+                var body4 = document.getElementById("tbody");
+                var ele4 = document.createElement("tr");
+                var sub41 = document.createElement("td");
+                ele4.appendChild(sub41);
+                body4.appendChild(ele4);
+                sub41.innerHTML = item4;
+
+
+                var count4 = localStorage.getItem("count4");
+                var sub42 = document.createElement("td");
+                ele4.appendChild(sub42);
+                //console.log(count4);
+                sub42.innerHTML = count4;
+
+
+                var price4 = localStorage.getItem("price4");
+                var removed4 = price4.toString();
+                var only_num4 = removed4.split(" ")[2];
+                console.log(only_num4);
+                var sub43 = document.createElement("td");
+                ele4.appendChild(sub43);
+                //console.log(count4);
+                sub43.innerHTML = price4;
+
+
+                var sub44 = document.createElement("td");
+                ele4.appendChild(sub44);
+                var sub45 = document.createElement("td");
+                ele4.appendChild(sub45);
+                var inpp4 = document.createElement("input");
+                inpp4.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp4.setAttribute("type", "button");
+                inpp4.setAttribute("style", "font-weight:bold;");
+                inpp4.setAttribute("value", "Remove");
+                inpp4.setAttribute("onclick", "remove4()");
+                sub45.appendChild(inpp4);
+                var str4 = removed4.split(" ")[1];
+                sub44.innerHTML = str4 + " " + count4 * only_num4;
+
+                amt = amt + count4 * only_num4;
+                document.getElementById("total_to_pay").innerHTML = str4 + " " + amt;
+            }
+            var item5 = localStorage.getItem("name5");
+            if (item5 == " Diary and Pen [ Set Of One ] ") {
+                //5
+
+                //console.log(item5)
+                function remove5() {
+                    amt = amt - count5 * only_num5;
+                    document.getElementById("total_to_pay").innerHTML = str5 + " " + amt;
+                    localStorage.removeItem("name5");
+                    ele5.remove();
+                }
+                var body5 = document.getElementById("tbody");
+                var ele5 = document.createElement("tr");
+                var sub51 = document.createElement("td");
+                ele5.appendChild(sub51);
+                body5.appendChild(ele5);
+                sub51.innerHTML = item5;
+
+
+                var count5 = localStorage.getItem("count5");
+                var sub52 = document.createElement("td");
+                ele5.appendChild(sub52);
+                //console.log(count5);
+                sub52.innerHTML = count5;
+
+
+                var price5 = localStorage.getItem("price5");
+                var removed5 = price5.toString();
+                var only_num5 = removed5.split(" ")[2];
+                console.log(only_num5);
+                var sub53 = document.createElement("td");
+                ele5.appendChild(sub53);
+                //console.log(count5);
+                sub53.innerHTML = price5;
+
+
+                var sub54 = document.createElement("td");
+                ele5.appendChild(sub54);
+
+                var sub55 = document.createElement("td");
+                ele5.appendChild(sub55);
+                var inpp5 = document.createElement("input");
+                inpp5.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp5.setAttribute("type", "button");
+                inpp5.setAttribute("style", "font-weight:bold;");
+                inpp5.setAttribute("value", "Remove");
+                inpp5.setAttribute("onclick", "remove5()");
+                sub55.appendChild(inpp5);
+                var str5 = removed5.split(" ")[1];
+                sub54.innerHTML = str5 + " " + count5 * only_num5;
+
+                amt = amt + count5 * only_num5;
+                document.getElementById("total_to_pay").innerHTML = str5 + " " + amt;
+            }
+            var item6 = localStorage.getItem("name6");
+            if (item6 == " Large Stapler [ Set Of One ] ") {
+                //6
+
+                //console.log(item6)
+                function remove6() {
+                    amt = amt - count6 * only_num6;
+                    document.getElementById("total_to_pay").innerHTML = str6 + " " + amt;
+                    localStorage.removeItem("name6");
+                    ele6.remove();
+                }
+                var body6 = document.getElementById("tbody");
+                var ele6 = document.createElement("tr");
+                var sub61 = document.createElement("td");
+                ele6.appendChild(sub61);
+                body6.appendChild(ele6);
+                sub61.innerHTML = item6;
+
+
+                var count6 = localStorage.getItem("count6");
+                var sub62 = document.createElement("td");
+                ele6.appendChild(sub62);
+                //console.log(count6);
+                sub62.innerHTML = count6;
+
+
+                var price6 = localStorage.getItem("price6");
+                var removed6 = price6.toString();
+                var only_num6 = removed6.split(" ")[2];
+                console.log(only_num6);
+                var sub63 = document.createElement("td");
+                ele6.appendChild(sub63);
+                //console.log(count6);
+                sub63.innerHTML = price6;
+
+
+                var sub64 = document.createElement("td");
+                ele6.appendChild(sub64);
+                var sub65 = document.createElement("td");
+                ele6.appendChild(sub65);
+                var inpp6 = document.createElement("input");
+                inpp6.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp6.setAttribute("type", "button");
+                inpp6.setAttribute("style", "font-weight:bold;");
+                inpp6.setAttribute("value", "Remove");
+                inpp6.setAttribute("onclick", "remove6()");
+                sub65.appendChild(inpp6);
+                var str6 = removed6.split(" ")[1];
+                sub64.innerHTML = str6 + " " + count6 * only_num6;
+
+                amt = amt + count6 * only_num6;
+                document.getElementById("total_to_pay").innerHTML = str6 + " " + amt;
+            }
+            var item7 = localStorage.getItem("name7");
+            if (item7 == " Small Stapler [ Set Of Two ] ") {
+                //7
+                //console.log(item7)
+                function remove7() {
+                    amt = amt - count7 * only_num7;
+                    document.getElementById("total_to_pay").innerHTML = str7 + " " + amt;
+                    localStorage.removeItem("name7");
+                    ele7.remove();
+                }
+                var body7 = document.getElementById("tbody");
+                var ele7 = document.createElement("tr");
+                var sub71 = document.createElement("td");
+                ele7.appendChild(sub71);
+                body7.appendChild(ele7);
+                sub71.innerHTML = item7;
+
+
+                var count7 = localStorage.getItem("count7");
+                var sub72 = document.createElement("td");
+                ele7.appendChild(sub72);
+                //console.log(count7);
+                sub72.innerHTML = count7;
+
+
+                var price7 = localStorage.getItem("price7");
+                var removed7 = price7.toString();
+                var only_num7 = removed7.split(" ")[2];
+                console.log(only_num7);
+                var sub73 = document.createElement("td");
+                ele7.appendChild(sub73);
+                //console.log(count7);
+                sub73.innerHTML = price7;
+
+
+                var sub74 = document.createElement("td");
+                ele7.appendChild(sub74);
+                var sub75 = document.createElement("td");
+                ele7.appendChild(sub75);
+                var inpp7 = document.createElement("input");
+                inpp7.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp7.setAttribute("type", "button");
+                inpp7.setAttribute("style", "font-weight:bold;");
+                inpp7.setAttribute("value", "Remove");
+                inpp7.setAttribute("onclick", "remove7()");
+                sub75.appendChild(inpp7);
+                var str7 = removed7.split(" ")[1];
+                sub74.innerHTML = str7 + " " + count7 * only_num7;
+
+                amt = amt + count7 * only_num7;
+                document.getElementById("total_to_pay").innerHTML = str7 + " " + amt;
+            }
+            var item8 = localStorage.getItem("name8");
+            if (item8 == " Dell Laptop [ One Year Warranty ] ") {
+                //8
+                //console.log(item8)
+                function remove8() {
+                    amt = amt - count8 * only_num8;
+                    document.getElementById("total_to_pay").innerHTML = str8 + " " + amt;
+                    localStorage.removeItem("name8");
+                    ele8.remove();
+                }
+                var body8 = document.getElementById("tbody");
+                var ele8 = document.createElement("tr");
+                var sub81 = document.createElement("td");
+                ele8.appendChild(sub81);
+                body8.appendChild(ele8);
+                sub81.innerHTML = item8;
+
+
+                var count8 = localStorage.getItem("count8");
+                var sub82 = document.createElement("td");
+                ele8.appendChild(sub82);
+                //console.log(count8);
+                sub82.innerHTML = count8;
+
+
+                var price8 = localStorage.getItem("price8");
+                var removed8 = price8.toString();
+                var only_num8 = removed8.split(" ")[2];
+                console.log(only_num8);
+                var sub83 = document.createElement("td");
+                ele8.appendChild(sub83);
+                //console.log(count8);
+                sub83.innerHTML = price8;
+
+
+                var sub84 = document.createElement("td");
+                ele8.appendChild(sub84);
+                var sub85 = document.createElement("td");
+                ele8.appendChild(sub85);
+                var inpp8 = document.createElement("input");
+                inpp8.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp8.setAttribute("type", "button");
+                inpp8.setAttribute("style", "font-weight:bold;");
+                inpp8.setAttribute("value", "Remove");
+                inpp8.setAttribute("onclick", "remove8()");
+                sub85.appendChild(inpp8);
+                var str8 = removed8.split(" ")[1];
+                sub84.innerHTML = str8 + " " + count8 * only_num8;
+
+                amt = amt + count8 * only_num8;
+                document.getElementById("total_to_pay").innerHTML = str8 + " " + amt;
+            }
+            var item9 = localStorage.getItem("name9");
+            if (item9 == " HP Laptop [ Two Years Warranty ] ") {
+                //9
+                //console.log(item9)
+                function remove9() {
+                    amt = amt - count9 * only_num9;
+                    document.getElementById("total_to_pay").innerHTML = str9 + " " + amt;
+                    localStorage.removeItem("name9");
+                    ele9.remove();
+                }
+                var body9 = document.getElementById("tbody");
+                var ele9 = document.createElement("tr");
+                var sub91 = document.createElement("td");
+                ele9.appendChild(sub91);
+                body9.appendChild(ele9);
+                sub91.innerHTML = item9;
+
+
+                var count9 = localStorage.getItem("count9");
+                var sub92 = document.createElement("td");
+                ele9.appendChild(sub92);
+                //console.log(count9);
+                sub92.innerHTML = count9;
+
+
+                var price9 = localStorage.getItem("price9");
+                var removed9 = price9.toString();
+                var only_num9 = removed9.split(" ")[2];
+                console.log(only_num9);
+                var sub93 = document.createElement("td");
+                ele9.appendChild(sub93);
+                //console.log(count9);
+                sub93.innerHTML = price9;
+
+
+                var sub94 = document.createElement("td");
+                ele9.appendChild(sub94);
+                var sub95 = document.createElement("td");
+                ele9.appendChild(sub95);
+                var inpp9 = document.createElement("input");
+                inpp9.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp9.setAttribute("type", "button");
+                inpp9.setAttribute("style", "font-weight:bold;");
+                inpp9.setAttribute("value", "Remove");
+                inpp9.setAttribute("onclick", "remove9()");
+                sub95.appendChild(inpp9);
+                var str9 = removed9.split(" ")[1];
+                sub94.innerHTML = str9 + " " + count9 * only_num9;
+
+                amt = amt + count9 * only_num9;
+                document.getElementById("total_to_pay").innerHTML = str9 + " " + amt;
+            }
+            var item10 = localStorage.getItem("name10");
+            if (item10 == " Apple MacBook [ Three Years Warranty ] ") {
+                //10
+                //console.log(item10)
+                function remove10() {
+                    amt = amt - count10 * only_num10;
+                    document.getElementById("total_to_pay").innerHTML = str10 + " " + amt;
+                    localStorage.removeItem("name10");
+                    ele10.remove();
+                }
+                var body10 = document.getElementById("tbody");
+                var ele10 = document.createElement("tr");
+                var sub101 = document.createElement("td");
+                ele10.appendChild(sub101);
+                body10.appendChild(ele10);
+                sub101.innerHTML = item10;
+
+
+                var count10 = localStorage.getItem("count10");
+                var sub102 = document.createElement("td");
+                ele10.appendChild(sub102);
+                //console.log(count10);
+                sub102.innerHTML = count10;
+
+
+                var price10 = localStorage.getItem("price10");
+                var removed10 = price10.toString();
+                var only_num10 = removed10.split(" ")[2];
+                console.log(only_num10);
+                var sub103 = document.createElement("td");
+                ele10.appendChild(sub103);
+                //console.log(count10);
+                sub103.innerHTML = price10;
+
+
+                var sub104 = document.createElement("td");
+                ele10.appendChild(sub104);
+                var sub105 = document.createElement("td");
+                ele10.appendChild(sub105);
+                var inpp10 = document.createElement("input");
+                inpp10.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp10.setAttribute("type", "button");
+                inpp10.setAttribute("style", "font-weight:bold;");
+                inpp10.setAttribute("value", "Remove");
+                inpp10.setAttribute("onclick", "remove10()");
+                sub105.appendChild(inpp10);
+                var str10 = removed10.split(" ")[1];
+                sub104.innerHTML = str10 + " " + count10 * only_num10;
+
+                amt = amt + count10 * only_num10;
+                document.getElementById("total_to_pay").innerHTML = str10 + " " + amt;
+            }
+            var item11 = localStorage.getItem("name11");
+            if (item11 == " Iphone 14 [ With Charger ] ") {
+                //11
+                //console.log(item11)
+                function remove11() {
+                    amt = amt - count11 * only_num11;
+                    document.getElementById("total_to_pay").innerHTML = str11 + " " + amt;
+                    localStorage.removeItem("name11");
+                    ele11.remove();
+                }
+                var body11 = document.getElementById("tbody");
+                var ele11 = document.createElement("tr");
+                var sub111 = document.createElement("td");
+                ele11.appendChild(sub111);
+                body11.appendChild(ele11);
+                sub111.innerHTML = item11;
+
+
+                var count11 = localStorage.getItem("count11");
+                var sub112 = document.createElement("td");
+                ele11.appendChild(sub112);
+                //console.log(count11);
+                sub112.innerHTML = count11;
+
+
+                var price11 = localStorage.getItem("price11");
+                var removed11 = price11.toString();
+                var only_num11 = removed11.split(" ")[2];
+                console.log(only_num11);
+                var sub113 = document.createElement("td");
+                ele11.appendChild(sub113);
+                //console.log(count11);
+                sub113.innerHTML = price11;
+
+
+                var sub114 = document.createElement("td");
+                ele11.appendChild(sub114);
+                var sub115 = document.createElement("td");
+                ele11.appendChild(sub115);
+                var inpp11 = document.createElement("input");
+                inpp11.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp11.setAttribute("type", "button");
+                inpp11.setAttribute("style", "font-weight:bold;");
+                inpp11.setAttribute("value", "Remove");
+                inpp11.setAttribute("onclick", "remove11()");
+                sub115.appendChild(inpp11);
+                var str11 = removed11.split(" ")[1];
+                sub114.innerHTML = str11 + " " + count11 * only_num11;
+
+                amt = amt + count11 * only_num11;
+                document.getElementById("total_to_pay").innerHTML = str11 + " " + amt;
+            }
+            var item12 = localStorage.getItem("name12");
+            //12
+            if (item12 == " Iphone 14 Pro [ Without Charger ] ") {
+                //console.log(item12)
+                function remove12() {
+                    amt = amt - count12 * only_num12;
+                    document.getElementById("total_to_pay").innerHTML = str12 + " " + amt;
+                    localStorage.removeItem("name12");
+                    ele12.remove();
+                }
+                var body12 = document.getElementById("tbody");
+                var ele12 = document.createElement("tr");
+                var sub121 = document.createElement("td");
+                ele12.appendChild(sub121);
+                body12.appendChild(ele12);
+                sub121.innerHTML = item12;
+
+
+                var count12 = localStorage.getItem("count12");
+                var sub122 = document.createElement("td");
+                ele12.appendChild(sub122);
+                //console.log(count12);
+                sub122.innerHTML = count12;
+
+
+                var price12 = localStorage.getItem("price12");
+                var removed12 = price12.toString();
+                var only_num12 = removed12.split(" ")[2];
+                console.log(only_num12);
+                var sub123 = document.createElement("td");
+                ele12.appendChild(sub123);
+                //console.log(count12);
+                sub123.innerHTML = price12;
+
+
+                var sub124 = document.createElement("td");
+                ele12.appendChild(sub124);
+                var sub125 = document.createElement("td");
+                ele12.appendChild(sub125);
+                var inpp12 = document.createElement("input");
+                inpp12.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp12.setAttribute("type", "button");
+                inpp12.setAttribute("style", "font-weight:bold;");
+                inpp12.setAttribute("value", "Remove");
+                inpp12.setAttribute("onclick", "remove12()");
+                sub125.appendChild(inpp12);
+                var str12 = removed12.split(" ")[1];
+                sub124.innerHTML = str12 + " " + count12 * only_num12;
+
+                amt = amt + count12 * only_num12;
+                document.getElementById("total_to_pay").innerHTML = str12 + " " + amt;
+            }
+            var item13 = localStorage.getItem("name13");
+            if (item13 == " Mix Fruits [ 8 Types, 2 kg ] ") {
+                //13
+                //console.log(item13)
+                function remove13() {
+                    amt = amt - count13 * only_num13;
+                    document.getElementById("total_to_pay").innerHTML = str13 + " " + amt;
+                    localStorage.removeItem("name13");
+                    ele13.remove();
+                }
+                var body13 = document.getElementById("tbody");
+                var ele13 = document.createElement("tr");
+                var sub131 = document.createElement("td");
+                ele13.appendChild(sub131);
+                body13.appendChild(ele13);
+                sub131.innerHTML = item13;
+
+
+                var count13 = localStorage.getItem("count13");
+                var sub132 = document.createElement("td");
+                ele13.appendChild(sub132);
+                //console.log(count13);
+                sub132.innerHTML = count13;
+
+
+                var price13 = localStorage.getItem("price13");
+                var removed13 = price13.toString();
+                var only_num13 = removed13.split(" ")[2];
+                console.log(only_num13);
+                var sub133 = document.createElement("td");
+                ele13.appendChild(sub133);
+                //console.log(count13);
+                sub133.innerHTML = price13;
+
+
+                var sub134 = document.createElement("td");
+                ele13.appendChild(sub134);
+                var sub135 = document.createElement("td");
+                ele13.appendChild(sub135);
+                var inpp13 = document.createElement("input");
+                inpp13.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp13.setAttribute("type", "button");
+                inpp13.setAttribute("style", "font-weight:bold;");
+                inpp13.setAttribute("value", "Remove");
+                inpp13.setAttribute("onclick", "remove13()");
+                sub135.appendChild(inpp13);
+                var str13 = removed13.split(" ")[1];
+                sub134.innerHTML = str13 + " " + count13 * only_num13;
+
+                amt = amt + count13 * only_num13;
+                document.getElementById("total_to_pay").innerHTML = str13 + " " + amt;
+            }
+            var item14 = localStorage.getItem("name14");
+            if (item14 == " Apple [ 2 kg ] ") {
+                //14
+                //console.log(item14)
+                function remove14() {
+                    amt = amt - count14 * only_num14;
+                    document.getElementById("total_to_pay").innerHTML = str14 + " " + amt;
+                    localStorage.removeItem("name14");
+                    ele14.remove();
+                }
+                var body14 = document.getElementById("tbody");
+                var ele14 = document.createElement("tr");
+                var sub141 = document.createElement("td");
+                ele14.appendChild(sub141);
+                body14.appendChild(ele14);
+                sub141.innerHTML = item14;
+
+
+                var count14 = localStorage.getItem("count14");
+                var sub142 = document.createElement("td");
+                ele14.appendChild(sub142);
+                //console.log(count14);
+                sub142.innerHTML = count14;
+
+
+                var price14 = localStorage.getItem("price14");
+                var removed14 = price14.toString();
+                var only_num14 = removed14.split(" ")[2];
+                console.log(only_num14);
+                var sub143 = document.createElement("td");
+                ele14.appendChild(sub143);
+                //console.log(count14);
+                sub143.innerHTML = price14;
+
+
+                var sub144 = document.createElement("td");
+                ele14.appendChild(sub144);
+                var sub145 = document.createElement("td");
+                ele14.appendChild(sub145);
+                var inpp14 = document.createElement("input");
+                inpp14.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp14.setAttribute("type", "button");
+                inpp14.setAttribute("style", "font-weight:bold;");
+                inpp14.setAttribute("value", "Remove");
+                inpp14.setAttribute("onclick", "remove14()");
+                sub145.appendChild(inpp14);
+                var str14 = removed14.split(" ")[1];
+                sub144.innerHTML = str14 + " " + count14 * only_num14;
+
+                amt = amt + count14 * only_num14;
+                document.getElementById("total_to_pay").innerHTML = str14 + " " + amt;
+            }
+            var item15 = localStorage.getItem("name15");
+            if (item15 == " A-4 Size Sheets [ 500 Sheets ] ") {
+                //15
+                //console.log(item15)
+                function remove15() {
+                    amt = amt - count15 * only_num15;
+                    document.getElementById("total_to_pay").innerHTML = str15 + " " + amt;
+                    localStorage.removeItem("name15");
+                    ele15.remove();
+                }
+                var body15 = document.getElementById("tbody");
+                var ele15 = document.createElement("tr");
+                var sub151 = document.createElement("td");
+                ele15.appendChild(sub151);
+                body15.appendChild(ele15);
+                sub151.innerHTML = item15;
+
+
+                var count15 = localStorage.getItem("count15");
+                var sub152 = document.createElement("td");
+                ele15.appendChild(sub152);
+                //console.log(count15);
+                sub152.innerHTML = count15;
+
+
+                var price15 = localStorage.getItem("price15");
+                var removed15 = price15.toString();
+                var only_num15 = removed15.split(" ")[2];
+                console.log(only_num15);
+                var sub153 = document.createElement("td");
+                ele15.appendChild(sub153);
+                //console.log(count15);
+                sub153.innerHTML = price15;
+
+
+                var sub154 = document.createElement("td");
+                ele15.appendChild(sub154);
+                var sub155 = document.createElement("td");
+                ele15.appendChild(sub155);
+                var inpp15 = document.createElement("input");
+                inpp15.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp15.setAttribute("type", "button");
+                inpp15.setAttribute("style", "font-weight:bold;");
+                inpp15.setAttribute("value", "Remove");
+                inpp15.setAttribute("onclick", "remove15()");
+                sub155.appendChild(inpp15);
+                var str15 = removed15.split(" ")[1];
+                sub154.innerHTML = str15 + " " + count15 * only_num15;
+
+                amt = amt + count15 * only_num15;
+                document.getElementById("total_to_pay").innerHTML = str15 + " " + amt;
+            }
+            var item16 = localStorage.getItem("name16");
+            if (item16 == " A-4 Size Sheets [ 500 Sheets ] ") {
+                //16
+                //console.log(item16)
+                function remove16() {
+                    amt = amt - count16 * only_num16;
+                    document.getElementById("total_to_pay").innerHTML = str16 + " " + amt;
+                    localStorage.removeItem("name16");
+                    ele16.remove();
+                }
+                var body16 = document.getElementById("tbody");
+                var ele16 = document.createElement("tr");
+                var sub161 = document.createElement("td");
+                ele16.appendChild(sub161);
+                body16.appendChild(ele16);
+                sub161.innerHTML = item16;
+
+
+                var count16 = localStorage.getItem("count16");
+                var sub162 = document.createElement("td");
+                ele16.appendChild(sub162);
+                //console.log(count16);
+                sub162.innerHTML = count16;
+
+
+                var price16 = localStorage.getItem("price16");
+                var removed16 = price16.toString();
+                var only_num16 = removed16.split(" ")[2];
+                console.log(only_num16);
+                var sub163 = document.createElement("td");
+                ele16.appendChild(sub163);
+                //console.log(count16);
+                sub163.innerHTML = price16;
+
+
+                var sub164 = document.createElement("td");
+                ele16.appendChild(sub164);
+                var sub165 = document.createElement("td");
+                ele16.appendChild(sub165);
+                var inpp16 = document.createElement("input");
+                inpp16.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp16.setAttribute("type", "button");
+                inpp16.setAttribute("style", "font-weight:bold;");
+                inpp16.setAttribute("value", "Remove");
+                inpp16.setAttribute("onclick", "remove16()");
+                sub165.appendChild(inpp16);
+                var str16 = removed16.split(" ")[1];
+                sub164.innerHTML = str16 + " " + count16 * only_num16;
+
+                amt = amt + count16 * only_num16;
+                document.getElementById("total_to_pay").innerHTML = str16 + " " + amt;
+            }
+            var item17 = localStorage.getItem("name17");
+            if (item17 == " HP Pen Drive [ 64 GB ] ") {
+                //17
+                //console.log(item17)
+                function remove17() {
+                    amt = amt - count17 * only_num17;
+                    document.getElementById("total_to_pay").innerHTML = str17 + " " + amt;
+                    localStorage.removeItem("name17");
+                    ele17.remove();
+                }
+                var body17 = document.getElementById("tbody");
+                var ele17 = document.createElement("tr");
+                var sub171 = document.createElement("td");
+                ele17.appendChild(sub171);
+                body17.appendChild(ele17);
+                sub171.innerHTML = item17;
+
+
+                var count17 = localStorage.getItem("count17");
+                var sub172 = document.createElement("td");
+                ele17.appendChild(sub172);
+                //console.log(count17);
+                sub172.innerHTML = count17;
+
+
+                var price17 = localStorage.getItem("price17");
+                var removed17 = price17.toString();
+                var only_num17 = removed17.split(" ")[2];
+                console.log(only_num17);
+                var sub173 = document.createElement("td");
+                ele17.appendChild(sub173);
+                //console.log(count17);
+                sub173.innerHTML = price17;
+
+
+                var sub174 = document.createElement("td");
+                ele17.appendChild(sub174);
+                var sub175 = document.createElement("td");
+                ele17.appendChild(sub175);
+                var inpp17 = document.createElement("input");
+                inpp17.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp17.setAttribute("type", "button");
+                inpp17.setAttribute("style", "font-weight:bold;");
+                inpp17.setAttribute("value", "Remove");
+                inpp17.setAttribute("onclick", "remove17()");
+                sub175.appendChild(inpp17);
+                var str17 = removed17.split(" ")[1];
+                sub174.innerHTML = str17 + " " + count17 * only_num17;
+
+                amt = amt + count17 * only_num17;
+                document.getElementById("total_to_pay").innerHTML = str17 + " " + amt;
+            }
+            var item18 = localStorage.getItem("name18");
+            if (item18 == " Fruit Juice [ 500 ml ] ") {
+                //18
+                //console.log(item18)
+                function remove18() {
+                    amt = amt - count18 * only_num18;
+                    document.getElementById("total_to_pay").innerHTML = str18 + " " + amt;
+                    localStorage.removeItem("name18");
+                    ele18.remove();
+                }
+                var body18 = document.getElementById("tbody");
+                var ele18 = document.createElement("tr");
+                var sub181 = document.createElement("td");
+                ele18.appendChild(sub181);
+                body18.appendChild(ele18);
+                sub181.innerHTML = item18;
+
+
+                var count18 = localStorage.getItem("count18");
+                var sub182 = document.createElement("td");
+                ele18.appendChild(sub182);
+                //console.log(count18);
+                sub182.innerHTML = count18;
+
+
+                var price18 = localStorage.getItem("price18");
+                var removed18 = price18.toString();
+                var only_num18 = removed18.split(" ")[2];
+                console.log(only_num18);
+                var sub183 = document.createElement("td");
+                ele18.appendChild(sub183);
+                //console.log(count18);
+                sub183.innerHTML = price18;
+
+
+                var sub184 = document.createElement("td");
+                ele18.appendChild(sub184);
+                var sub185 = document.createElement("td");
+                ele18.appendChild(sub185);
+                var inpp18 = document.createElement("input");
+                inpp18.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp18.setAttribute("type", "button");
+                inpp18.setAttribute("style", "font-weight:bold;");
+                inpp18.setAttribute("value", "Remove");
+                inpp18.setAttribute("onclick", "remove18()");
+                sub185.appendChild(inpp18);
+                var str18 = removed18.split(" ")[1];
+                sub184.innerHTML = str18 + " " + count18 * only_num18;
+
+                amt = amt + count18 * only_num18;
+                document.getElementById("total_to_pay").innerHTML = str18 + " " + amt;
+            }
+            var item19 = localStorage.getItem("name19");
+            if (item19 == " Cold Drinks [ Set Of Four ] ") {
+                //19
+                //console.log(item19)
+                function remove19() {
+                    amt = amt - count19 * only_num19;
+                    document.getElementById("total_to_pay").innerHTML = str19 + " " + amt;
+                    localStorage.removeItem("name19");
+                    ele19.remove();
+                }
+                var body19 = document.getElementById("tbody");
+                var ele19 = document.createElement("tr");
+                var sub191 = document.createElement("td");
+                ele19.appendChild(sub191);
+                body19.appendChild(ele19);
+                sub191.innerHTML = item19;
+
+
+                var count19 = localStorage.getItem("count19");
+                var sub192 = document.createElement("td");
+                ele19.appendChild(sub192);
+                //console.log(count19);
+                sub192.innerHTML = count19;
+
+
+                var price19 = localStorage.getItem("price19");
+                var removed19 = price19.toString();
+                var only_num19 = removed19.split(" ")[2];
+                console.log(only_num19);
+                var sub193 = document.createElement("td");
+                ele19.appendChild(sub193);
+                //console.log(count19);
+                sub193.innerHTML = price19;
+
+
+                var sub194 = document.createElement("td");
+                ele19.appendChild(sub194);
+                var sub195 = document.createElement("td");
+                ele19.appendChild(sub195);
+                var inpp19 = document.createElement("input");
+                inpp19.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp19.setAttribute("type", "button");
+                inpp19.setAttribute("style", "font-weight:bold;");
+                inpp19.setAttribute("value", "Remove");
+                inpp19.setAttribute("onclick", "remove19()");
+                sub195.appendChild(inpp19);
+                var str19 = removed19.split(" ")[1];
+                sub194.innerHTML = str19 + " " + count19 * only_num19;
+
+                amt = amt + count19 * only_num19;
+                document.getElementById("total_to_pay").innerHTML = str19 + " " + amt;
+            }
+            var item20 = localStorage.getItem("name20");
+            if (item20 == " Ethernet Cable [ 15 metres ] ") {
+                //20
+                //console.log(item20)
+                function remove20() {
+                    amt = amt - count20 * only_num20;
+                    document.getElementById("total_to_pay").innerHTML = str20 + " " + amt;
+                    localStorage.removeItem("name20");
+                    ele20.remove();
+                }
+                var body20 = document.getElementById("tbody");
+                var ele20 = document.createElement("tr");
+                var sub201 = document.createElement("td");
+                ele20.appendChild(sub201);
+                body20.appendChild(ele20);
+                sub201.innerHTML = item20;
+
+
+                var count20 = localStorage.getItem("count20");
+                var sub202 = document.createElement("td");
+                ele20.appendChild(sub202);
+                //console.log(count20);
+                sub202.innerHTML = count20;
+
+
+                var price20 = localStorage.getItem("price20");
+                var removed20 = price20.toString();
+                var only_num20 = removed20.split(" ")[2];
+                console.log(only_num20);
+                var sub203 = document.createElement("td");
+                ele20.appendChild(sub203);
+                //console.log(count20);
+                sub203.innerHTML = price20;
+
+
+                var sub204 = document.createElement("td");
+                ele20.appendChild(sub204);
+                var sub205 = document.createElement("td");
+                ele20.appendChild(sub205);
+                var inpp20 = document.createElement("input");
+                inpp20.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp20.setAttribute("type", "button");
+                inpp20.setAttribute("style", "font-weight:bold;");
+                inpp20.setAttribute("value", "Remove");
+                inpp20.setAttribute("onclick", "remove20()");
+                sub205.appendChild(inpp20);
+                var str20 = removed20.split(" ")[1];
+                sub204.innerHTML = str20 + " " + count20 * only_num20;
+
+                amt = amt + count20 * only_num20;
+                document.getElementById("total_to_pay").innerHTML = str20 + " " + amt;
+            }
+            var item21 = localStorage.getItem("name21");
+            if (item21 == " Sandisk Pendrive [ 1 TB ] ") {
+                //21
+                //console.log(item21)
+                function remove21() {
+                    amt = amt - count21 * only_num21;
+                    document.getElementById("total_to_pay").innerHTML = str21 + " " + amt;
+                    localStorage.removeItem("name21");
+                    ele21.remove();
+                }
+                var body21 = document.getElementById("tbody");
+                var ele21 = document.createElement("tr");
+                var sub211 = document.createElement("td");
+                ele21.appendChild(sub211);
+                body21.appendChild(ele21);
+                sub211.innerHTML = item21;
+
+
+                var count21 = localStorage.getItem("count21");
+                var sub212 = document.createElement("td");
+                ele21.appendChild(sub212);
+                //console.log(count21);
+                sub212.innerHTML = count21;
+
+
+                var price21 = localStorage.getItem("price21");
+                var removed21 = price21.toString();
+                var only_num21 = removed21.split(" ")[2];
+                console.log(only_num21);
+                var sub213 = document.createElement("td");
+                ele21.appendChild(sub213);
+                //console.log(count21);
+                sub213.innerHTML = price21;
+
+
+                var sub214 = document.createElement("td");
+                ele21.appendChild(sub214);
+                var sub215 = document.createElement("td");
+                ele21.appendChild(sub215);
+                var inpp21 = document.createElement("input");
+                inpp21.setAttribute("class", "btn bg-danger text-white font-weight-bold");
+                inpp21.setAttribute("type", "button");
+                inpp21.setAttribute("style", "font-weight:bold;");
+                inpp21.setAttribute("value", "Remove");
+                inpp21.setAttribute("onclick", "remove21()");
+                sub215.appendChild(inpp21);
+                var str21 = removed21.split(" ")[1];
+                sub214.innerHTML = str21 + " " + count21 * only_num21;
+
+                amt = amt + count21 * only_num21;
+                document.getElementById("total_to_pay").innerHTML = str21 + " " + amt;
+            }
+            function amount() {
+                localStorage.setItem("amount",amt);
+            }
+            if(amt == 0)
+            {
+                let tabble = document.getElementById("table");
+                tabble.style.display = "none";
+            }
+            else{
+                   let display_ = document.getElementById("display");
+                   display_.style.display = "none"
+            }
+            
+        </script>
+</body>
+
+</html>
